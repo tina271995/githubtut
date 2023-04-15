@@ -1,16 +1,8 @@
-import streamlit as st
 from bs4 import BeautifulSoup
-
-# st.title("Instagram Profile Picture Downloader")
-
-# username = st.text_input("Enter the Instagram username of the profile whose picture you want to download:")
-
-
 from fastapi import FastAPI
+import requests
 
-
-
-
+app = FastAPI()
 @app.get("/")
 async def root():
     return {"message": "Hello World"}
